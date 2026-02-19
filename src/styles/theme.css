@@ -1,0 +1,238 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Portfolio Design System Colors */
+  --navy: #1A2A40;
+  --cyan: #00BFA6;
+  --coral: #FF6B6B;
+  --off-white: #F9FAFB;
+  --slate: #475569;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-700: #334155;
+  
+  /* Base font size */
+  --font-size: 16px;
+  
+  /* Design system mappings */
+  --background: #ffffff;
+  --foreground: var(--navy);
+  --card: #ffffff;
+  --card-foreground: var(--navy);
+  --popover: #ffffff;
+  --popover-foreground: var(--navy);
+  --primary: var(--cyan);
+  --primary-foreground: #ffffff;
+  --secondary: var(--coral);
+  --secondary-foreground: #ffffff;
+  --muted: var(--off-white);
+  --muted-foreground: var(--slate);
+  --accent: var(--cyan);
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: var(--gray-200);
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: var(--gray-200);
+  --ring: var(--cyan);
+  
+  /* Font weights */
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+  
+  /* Chart colors */
+  --chart-1: var(--cyan);
+  --chart-2: var(--coral);
+  --chart-3: var(--navy);
+  --chart-4: var(--slate);
+  --chart-5: var(--off-white);
+  
+  /* Sidebar */
+  --sidebar: var(--off-white);
+  --sidebar-foreground: var(--navy);
+  --sidebar-primary: var(--navy);
+  --sidebar-primary-foreground: var(--off-white);
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: var(--navy);
+  --sidebar-border: var(--gray-200);
+  --sidebar-ring: var(--cyan);
+}
+
+.dark {
+  --background: var(--navy);
+  --foreground: var(--off-white);
+  --card: #243447;
+  --card-foreground: var(--off-white);
+  --popover: #243447;
+  --popover-foreground: var(--off-white);
+  --primary: var(--cyan);
+  --primary-foreground: var(--navy);
+  --secondary: var(--coral);
+  --secondary-foreground: #ffffff;
+  --muted: #243447;
+  --muted-foreground: var(--gray-200);
+  --accent: var(--cyan);
+  --accent-foreground: var(--navy);
+  --destructive: #dc2626;
+  --destructive-foreground: var(--off-white);
+  --border: #334155;
+  --input: #334155;
+  --ring: var(--cyan);
+  --sidebar: #243447;
+  --sidebar-foreground: var(--off-white);
+  --sidebar-primary: var(--cyan);
+  --sidebar-primary-foreground: var(--navy);
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: var(--off-white);
+  --sidebar-border: #334155;
+  --sidebar-ring: var(--cyan);
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-cyan: var(--cyan);
+  --color-coral: var(--coral);
+  --color-off-white: var(--off-white);
+  --color-slate: var(--slate);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-700: var(--gray-700);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /**
+  * Default typography styles for HTML elements.
+  * These are in @layer base, so Tailwind utility classes automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  h1 {
+    font-size: 3rem; /* 48px */
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    color: var(--navy);
+  }
+
+  h2 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
+    color: var(--navy);
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    color: var(--navy);
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--navy);
+  }
+
+  p {
+    font-size: 1rem; /* 16px */
+    font-weight: var(--font-weight-normal);
+    line-height: 1.7;
+    color: var(--slate);
+  }
+
+  label {
+    font-size: 0.875rem; /* 14px */
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--navy);
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Dark mode typography adjustments */
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4 {
+    color: var(--off-white);
+  }
+
+  .dark p {
+    color: var(--gray-200);
+  }
+
+  .dark label {
+    color: var(--off-white);
+  }
+}
