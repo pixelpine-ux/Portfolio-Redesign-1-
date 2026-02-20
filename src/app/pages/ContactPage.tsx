@@ -92,8 +92,8 @@ export function ContactPage() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block mb-2">
-                    Name
+                  <label htmlFor="name" className="block mb-2 font-medium text-slate dark:text-gray-200">
+                    Name <span className="text-coral">*</span>
                   </label>
                   <input
                     type="text"
@@ -101,6 +101,9 @@ export function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.name}
                     className={`w-full h-14 px-4 border-2 rounded-lg transition-colors focus:outline-none focus:border-cyan bg-white dark:bg-slate-700 dark:text-white ${
                       errors.name ? 'border-coral' : 'border-gray-200 dark:border-slate-600'
                     }`}
@@ -112,8 +115,8 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block mb-2">
-                    Email
+                  <label htmlFor="email" className="block mb-2 font-medium text-slate dark:text-gray-200">
+                    Email <span className="text-coral">*</span>
                   </label>
                   <input
                     type="email"
@@ -121,6 +124,9 @@ export function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.email}
                     className={`w-full h-14 px-4 border-2 rounded-lg transition-colors focus:outline-none focus:border-cyan bg-white dark:bg-slate-700 dark:text-white ${
                       errors.email ? 'border-coral' : 'border-gray-200 dark:border-slate-600'
                     }`}
@@ -132,14 +138,17 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block mb-2">
-                    Message
+                  <label htmlFor="message" className="block mb-2 font-medium text-slate dark:text-gray-200">
+                    Message <span className="text-coral">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.message}
                     rows={6}
                     className={`w-full px-4 py-3 border-2 rounded-lg transition-colors focus:outline-none focus:border-cyan resize-none bg-white dark:bg-slate-700 dark:text-white ${
                       errors.message ? 'border-coral' : 'border-gray-200 dark:border-slate-600'
