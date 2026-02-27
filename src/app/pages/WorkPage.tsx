@@ -42,6 +42,39 @@ const projects: Project[] = [
   },
 ];
 
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <>
+      <div className="aspect-[4/3] overflow-hidden">
+        <ImageWithFallback
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      <div className="p-5 md:p-6">
+        <h3 className="mb-2 text-lg md:text-xl">{project.title}</h3>
+        <p className="text-slate dark:text-gray-200 mb-4 text-sm md:text-base">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.tags.slice(0, 3).map((tag) => (
+            <span
+              key={tag}
+              className="text-xs md:text-sm px-2 md:px-3 py-1 bg-off-white dark:bg-slate-600 text-navy dark:text-gray-200 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        {project.link && (
+          <span className="mt-4 inline-block text-sm text-cyan hover:underline">
+            View Case Study →
+          </span>
+        )}
+      </div>
+    </>
+  );
+}
+
 export function WorkPage() {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>('All');
 
@@ -84,67 +117,19 @@ export function WorkPage() {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {filteredProjects.map((project) => (
-              project.link ? (
-                <Link
-                  key={project.id}
-                  to={project.link}
-                  className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer group block"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-5 md:p-6">
-                    <h3 className="mb-2 text-lg md:text-xl">{project.title}</h3>
-                    <p className="text-slate dark:text-gray-200 mb-4 text-sm md:text-base">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs md:text-sm px-2 md:px-3 py-1 bg-off-white dark:bg-slate-600 text-navy dark:text-gray-200 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="mt-4 inline-block text-sm text-cyan hover:underline">
-                      View Case Study →
-                    </span>
-                  </div>
+            {filteredProjects.map((project) => {
+              const cardClasses = "bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group";
+              
+              return project.link ? (
+                <Link key={project.id} to={project.link} className={`${cardClasses} cursor-pointer block`}>
+                  <ProjectCard project={project} />
                 </Link>
               ) : (
-                <div
-                  key={project.id}
-                  className="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer group"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-5 md:p-6">
-                    <h3 className="mb-2 text-lg md:text-xl">{project.title}</h3>
-                    <p className="text-slate dark:text-gray-200 mb-4 text-sm md:text-base">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs md:text-sm px-2 md:px-3 py-1 bg-off-white dark:bg-slate-600 text-navy dark:text-gray-200 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <div key={project.id} className={cardClasses}>
+                  <ProjectCard project={project} />
                 </div>
-              )
-            ))}
+              );
+            })}
           </div>
 
           {/* Empty State */}
