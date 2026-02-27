@@ -2,13 +2,13 @@ import { ArrowLeft, Clock, Users, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import Slider from 'react-slick';
-import interactionFlow1 from 'figma:asset/8774c180989834c4be44ced1e427dc5533339d38.png';
-import interactionFlow2 from 'figma:asset/38c8d6ba68a807ebc4af8511e9d6aa2b7ddf63f1.png';
-import interactionFlow3 from 'figma:asset/a669e2e4031ea043cbe036ba86cb1816e6e3b97c.png';
-import interactionFlow4 from 'figma:asset/575c6b48a45d19b0da035f70836604559993e358.png';
-import interactionFlow5 from 'figma:asset/33fae32c001b97bdf6e0c9df3b1866eccd359aa5.png';
-import interactionFlow6 from 'figma:asset/1477b2cb5fcc9f5609a31800e5d9cc81ae4de3eb.png';
-import interactionFlow7 from 'figma:asset/2b043c00f3b6c413954148ad99c9686c89c5fa92.png';
+import interactionFlow1 from '@/assets/8774c180989834c4be44ced1e427dc5533339d38.png';
+import interactionFlow2 from '@/assets/38c8d6ba68a807ebc4af8511e9d6aa2b7ddf63f1.png';
+import interactionFlow3 from '@/assets/a669e2e4031ea043cbe036ba86cb1816e6e3b97c.png';
+import interactionFlow4 from '@/assets/575c6b48a45d19b0da035f70836604559993e358.png';
+import interactionFlow5 from '@/assets/33fae32c001b97bdf6e0c9df3b1866eccd359aa5.png';
+import interactionFlow6 from '@/assets/1477b2cb5fcc9f5609a31800e5d9cc81ae4de3eb.png';
+import interactionFlow7 from '@/assets/2b043c00f3b6c413954148ad99c9686c89c5fa92.png';
 
 export function EcommerceCaseStudy() {
   const carouselSettings = {
