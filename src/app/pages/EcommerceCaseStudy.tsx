@@ -156,7 +156,7 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Research & Process */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-16 md:py-24 px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-12 text-center">Research & Discovery</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
@@ -172,19 +172,19 @@ export function EcommerceCaseStudy() {
               <div className="space-y-6">
                 <div>
                   <h4 className="mb-2">1. User Interviews</h4>
-                  <p className="text-slate">Conducted 12 interviews with existing customers to understand pain points</p>
+                  <p className="text-slate dark:text-gray-300">Conducted 12 interviews with existing customers to understand pain points</p>
                 </div>
                 <div>
                   <h4 className="mb-2">2. Heatmap Analysis</h4>
-                  <p className="text-slate">Analyzed user behavior to identify drop-off points in checkout flow</p>
+                  <p className="text-slate dark:text-gray-300">Analyzed user behavior to identify drop-off points in checkout flow</p>
                 </div>
                 <div>
                   <h4 className="mb-2">3. User Personas</h4>
-                  <p className="text-slate">Created 3 detailed personas representing our core user segments</p>
+                  <p className="text-slate dark:text-gray-300">Created 3 detailed personas representing our core user segments</p>
                 </div>
                 <div>
                   <h4 className="mb-2">4. Competitive Analysis</h4>
-                  <p className="text-slate">Reviewed best practices from leading e-commerce platforms</p>
+                  <p className="text-slate dark:text-gray-300">Reviewed best practices from leading e-commerce platforms</p>
                 </div>
               </div>
             </div>
@@ -193,16 +193,16 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* The Challenge */}
-      <section className="py-16 md:py-24 px-6 bg-coral/5">
+      <section className="py-16 md:py-24 px-6 bg-coral/5 dark:bg-coral/10">
         <div className="max-w-[1200px] mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="mb-6">The Challenge</h2>
-            <p className="text-lg text-slate mb-6">
-              <strong className="text-navy">Balancing business vs. UX goals:</strong> The product manager wanted 
+            <p className="text-lg text-slate dark:text-gray-300 mb-6">
+              <strong className="text-navy dark:text-cyan">Balancing business vs. UX goals:</strong> The product manager wanted 
               to encourage account creation for customer retention and email marketing, but user research showed 
               that mandatory sign-up was a major friction point.
             </p>
-            <p className="text-lg text-slate">
+            <p className="text-lg text-slate dark:text-gray-300">
               I advocated for guest checkout while designing a post-purchase account creation flow that felt 
               valuable rather than forced, ultimately aligning both business and user needs.
             </p>
@@ -211,7 +211,7 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Design Process & Wireframes */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-16 md:py-24 px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-12 text-center">Design Process</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -224,7 +224,7 @@ export function EcommerceCaseStudy() {
                   </div>
                   <div>
                     <h4 className="mb-1">Ideation</h4>
-                    <p className="text-slate">Sketched multiple checkout flow variations</p>
+                    <p className="text-slate dark:text-gray-300">Sketched multiple checkout flow variations</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -233,7 +233,7 @@ export function EcommerceCaseStudy() {
                   </div>
                   <div>
                     <h4 className="mb-1">Wireframing</h4>
-                    <p className="text-slate">Created low-fidelity wireframes in Figma</p>
+                    <p className="text-slate dark:text-gray-300">Created low-fidelity wireframes in Figma</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -242,7 +242,7 @@ export function EcommerceCaseStudy() {
                   </div>
                   <div>
                     <h4 className="mb-1">Prototyping</h4>
-                    <p className="text-slate">Built interactive prototypes for testing</p>
+                    <p className="text-slate dark:text-gray-300">Built interactive prototypes for testing</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -251,7 +251,7 @@ export function EcommerceCaseStudy() {
                   </div>
                   <div>
                     <h4 className="mb-1">Testing & Iteration</h4>
-                    <p className="text-slate">Tested with users and refined based on feedback</p>
+                    <p className="text-slate dark:text-gray-300">Tested with users and refined based on feedback</p>
                   </div>
                 </div>
               </div>
@@ -268,54 +268,54 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Key Solutions */}
-      <section className="py-16 md:py-24 px-6 bg-off-white">
+      <section className="py-16 md:py-24 px-6 bg-off-white dark:bg-slate-800">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-12 text-center">Key Design Solutions</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="mb-3">Guest Checkout</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Removed mandatory account creation, reducing friction by 40%. Added optional 
                 post-purchase account creation with clear value proposition.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 rounded-lg bg-coral/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="mb-3">Progress Indicator</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Added clear "Step X of 3" indicator, helping users understand how far they 
                 are in the checkout process and reducing abandonment anxiety.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 rounded-lg bg-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 rounded-lg bg-navy/10 dark:bg-cyan/10 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-navy dark:text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="mb-3">Mobile-First Design</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Optimized entire flow for mobile devices with larger touch targets, 
                 streamlined forms, and faster load times through image optimization.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-slate-700 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
               <h3 className="mb-3">Design System</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Created a cohesive design system ensuring consistency across all touchpoints, 
                 improving brand recognition and reducing design debt.
               </p>
@@ -325,10 +325,10 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Interaction Design */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-16 md:py-24 px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-6 text-center">Interaction Flow Guide</h2>
-          <p className="text-center text-lg text-slate mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-slate dark:text-gray-300 mb-12 max-w-3xl mx-auto">
             Mobile gesture patterns and micro-interactions designed to create an intuitive, 
             native-feeling shopping experience for urban professionals browsing on-the-go.
           </p>
@@ -345,21 +345,21 @@ export function EcommerceCaseStudy() {
 
           {/* Interaction Highlights */}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-cyan">
+            <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-l-4 border-cyan">
               <h4 className="mb-2">Gesture-Based</h4>
-              <p className="text-slate text-sm">
+              <p className="text-slate dark:text-gray-300 text-sm">
                 Swipe for product galleries, pinch to zoom, tap & hold for quick actions
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-coral">
+            <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-l-4 border-coral">
               <h4 className="mb-2">Micro-Interactions</h4>
-              <p className="text-slate text-sm">
+              <p className="text-slate dark:text-gray-300 text-sm">
                 Button feedback, form validation, success animations, loading states
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-navy">
+            <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm border-l-4 border-navy dark:border-cyan">
               <h4 className="mb-2">Accessibility</h4>
-              <p className="text-slate text-sm">
+              <p className="text-slate dark:text-gray-300 text-sm">
                 44px touch targets, haptic feedback, screen reader support, motion reduction
               </p>
             </div>
@@ -368,7 +368,7 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Results */}
-      <section className="py-16 md:py-24 px-6 bg-gradient-to-br from-cyan/5 to-coral/5">
+      <section className="py-16 md:py-24 px-6 bg-gradient-to-br from-cyan/5 to-coral/5 dark:from-cyan/10 dark:to-coral/10">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-12 text-center">Expected Results</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -380,7 +380,7 @@ export function EcommerceCaseStudy() {
               />
             </div>
             <div>
-              <p className="text-lg text-slate mb-8">
+              <p className="text-lg text-slate dark:text-gray-300 mb-8">
                 Based on prototype testing with 24 users and industry benchmarks, 
                 we projected significant improvements in key metrics:
               </p>
@@ -390,7 +390,7 @@ export function EcommerceCaseStudy() {
                     <span className="text-5xl font-bold text-cyan">25%</span>
                     <span className="text-xl text-slate">reduction</span>
                   </div>
-                  <p className="text-slate">
+                  <p className="text-slate dark:text-gray-300">
                     Expected decrease in cart abandonment rate from 68% to ~51%, 
                     bringing it closer to industry standards
                   </p>
@@ -398,9 +398,9 @@ export function EcommerceCaseStudy() {
                 <div>
                   <div className="flex items-baseline gap-3 mb-2">
                     <span className="text-5xl font-bold text-coral">40%</span>
-                    <span className="text-xl text-slate">increase</span>
+                    <span className="text-xl text-slate dark:text-gray-300">increase</span>
                   </div>
-                  <p className="text-slate">
+                  <p className="text-slate dark:text-gray-300">
                     Projected increase in mobile conversions due to optimized mobile-first 
                     design and faster load times
                   </p>
@@ -412,34 +412,34 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Lessons Learned */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-16 md:py-24 px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="mb-12 text-center">Lessons Learned</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-off-white p-8 rounded-lg">
+            <div className="bg-off-white dark:bg-slate-800 p-8 rounded-lg">
               <h3 className="mb-4">Data-Driven Advocacy</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Using prototype test results and industry benchmarks helped me successfully 
                 advocate for guest checkout despite initial stakeholder resistance.
               </p>
             </div>
-            <div className="bg-off-white p-8 rounded-lg">
+            <div className="bg-off-white dark:bg-slate-800 p-8 rounded-lg">
               <h3 className="mb-4">Mobile-First Matters</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 For urban professionals who shop during commutes, designing for mobile first 
                 wasn't just best practice—it was essential for business success.
               </p>
             </div>
-            <div className="bg-off-white p-8 rounded-lg">
+            <div className="bg-off-white dark:bg-slate-800 p-8 rounded-lg">
               <h3 className="mb-4">Micro-Interactions Impact</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Small details like loading animations and haptic feedback significantly 
                 improved perceived performance and user confidence.
               </p>
             </div>
-            <div className="bg-off-white p-8 rounded-lg">
+            <div className="bg-off-white dark:bg-slate-800 p-8 rounded-lg">
               <h3 className="mb-4">Design Systems Save Time</h3>
-              <p className="text-slate">
+              <p className="text-slate dark:text-gray-300">
                 Building a design system upfront made collaboration with developers smoother 
                 and ensured consistency across all pages.
               </p>
@@ -449,7 +449,7 @@ export function EcommerceCaseStudy() {
       </section>
 
       {/* Next Steps */}
-      <section className="py-16 px-6 bg-navy text-white">
+      <section className="py-16 px-6 bg-navy dark:bg-black text-white">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="mb-6 text-white">Next Steps</h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">

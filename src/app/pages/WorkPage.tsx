@@ -96,7 +96,7 @@ export function WorkPage() {
       </section>
 
       {/* Project Grid */}
-      <section className="py-12 md:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           {/* Filter */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12">

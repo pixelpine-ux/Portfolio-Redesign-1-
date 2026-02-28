@@ -62,7 +62,7 @@ export function AboutPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Personal Story */}
-      <section className="py-12 md:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
             <div className="md:col-span-1">
@@ -148,7 +148,7 @@ export function AboutPage() {
       </section>
 
       {/* Experience Timeline */}
-      <section className="py-12 md:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-center mb-8 md:mb-12 text-2xl md:text-4xl">My Journey</h2>
           <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">

@@ -73,7 +73,7 @@ export function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-12 md:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
@@ -218,7 +218,7 @@ export function ContactPage() {
 
                 <div className="bg-navy dark:bg-slate-800 text-white p-6 rounded-lg">
                   <h3 className="text-white mb-2">Response Time</h3>
-                  <p className="text-gray-200">
+                  <p className="text-gray-200 dark:text-gray-300">
                     I typically respond to messages within 24 hours during weekdays. 
                     For urgent inquiries, please mention it in your message subject.
                   </p>

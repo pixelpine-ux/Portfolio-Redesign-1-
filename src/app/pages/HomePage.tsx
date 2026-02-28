@@ -49,7 +49,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 md:pt-40 md:pb-24 px-4 md:px-6 relative overflow-hidden">
+      <section className="pt-24 pb-12 md:pt-40 md:pb-24 px-4 md:px-6 relative overflow-hidden dark:bg-slate-900">
         <GeometricPattern />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="max-w-3xl">
@@ -105,7 +105,7 @@ export function HomePage() {
       </section>
 
       {/* Featured Work */}
-      <section className="py-12 md:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 md:mb-12 gap-4">
             <h2 className="text-2xl md:text-4xl">Featured Work</h2>
