@@ -33,7 +33,7 @@ export function EcommerceCaseStudy() {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20">
       {/* Back Button */}
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 pt-6 md:pt-8">
         <Link 
@@ -464,6 +464,6 @@ export function EcommerceCaseStudy() {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

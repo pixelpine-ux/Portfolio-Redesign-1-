@@ -60,7 +60,7 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20">
       {/* Header */}
       <section className="py-12 md:py-24 px-4 md:px-6 bg-off-white dark:bg-slate-800">
         <div className="max-w-[1200px] mx-auto text-center">
@@ -228,6 +228,6 @@ export function ContactPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

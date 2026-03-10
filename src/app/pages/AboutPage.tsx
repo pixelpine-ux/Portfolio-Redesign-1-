@@ -60,7 +60,7 @@ const timeline = [
 
 export function AboutPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20">
       {/* Personal Story */}
       <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
@@ -172,6 +172,6 @@ export function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

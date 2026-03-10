@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 
 type ProjectCategory = 'All' | 'Design' | 'Development';
 
@@ -43,12 +42,27 @@ const projects: Project[] = [
 ];
 
 function ProjectCard({ project }: { project: Project }) {
+  // Helper to generate responsive Unsplash URLs with WebP format
+  const getOptimizedUrl = (url: string, width: number) => {
+    if (!url.includes('unsplash.com')) return url;
+    return url.replace(/&w=\d+/, '') + `&w=${width}&fm=webp&q=80`;
+  };
+
   return (
     <>
-      <div className="aspect-[4/3] overflow-hidden">
-        <ImageWithFallback
-          src={project.image}
+      <div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-slate-800">
+        <img
+          src={getOptimizedUrl(project.image, 800)}
+          srcSet={`
+            ${getOptimizedUrl(project.image, 640)} 640w,
+            ${getOptimizedUrl(project.image, 768)} 768w,
+            ${getOptimizedUrl(project.image, 1024)} 1024w,
+            ${getOptimizedUrl(project.image, 1280)} 1280w
+          `}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={project.title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -83,7 +97,7 @@ export function WorkPage() {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20">
       {/* Header */}
       <section className="py-12 md:py-24 px-4 md:px-6 bg-off-white dark:bg-slate-800">
         <div className="max-w-[1200px] mx-auto text-center">
@@ -140,6 +154,6 @@ export function WorkPage() {
           )}
         </div>
       </section>
-    </div>
+    </main>
   );
 }

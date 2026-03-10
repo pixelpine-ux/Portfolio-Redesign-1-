@@ -47,7 +47,7 @@ const featuredProjects = [
 
 export function HomePage() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 pb-12 md:pt-40 md:pb-24 px-4 md:px-6 relative overflow-hidden dark:bg-slate-900">
         <GeometricPattern />
@@ -148,6 +148,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
