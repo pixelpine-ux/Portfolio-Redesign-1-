@@ -185,10 +185,10 @@ export function ContactPage() {
                         For general inquiries and project discussions
                       </p>
                       <a 
-                        href="mailto:mastewal@example.com" 
+                        href="mailto:iammastewal@gmail.com" 
                         className="text-cyan hover:underline"
                       >
-                        mastewal@example.com
+                        iammastewal@gmail.com
                       </a>
                     </div>
                   </div>
