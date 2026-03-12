@@ -155,60 +155,114 @@ html {
   background: #00a890;
 }
 
-/* Custom arrows */
+/* Custom arrows - Hybrid approach with high visibility */
 .slick-prev,
 .slick-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 40px;
-  height: 40px;
-  border: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: rgba(30, 42, 58, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0;
   line-height: 0;
+  opacity: 0.9;
+}
+
+/* Larger arrows on desktop */
+@media (min-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 48px;
+    height: 48px;
+    opacity: 0.7;
+  }
+  
+  /* Fade in on hover (desktop only) */
+  .slick-slider:hover .slick-prev,
+  .slick-slider:hover .slick-next {
+    opacity: 1;
+  }
 }
 
 .dark .slick-prev,
 .dark .slick-next {
-  background: rgba(0, 191, 166, 0.2);
+  background: rgba(0, 191, 166, 0.85);
+  border-color: rgba(0, 191, 166, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 191, 166, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .slick-prev:hover,
 .slick-next:hover {
   background: #00BFA6;
+  border-color: #00BFA6;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 191, 166, 0.4), 0 3px 6px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.dark .slick-prev:hover,
+.dark .slick-next:hover {
+  background: #00d4b8;
+  border-color: #00d4b8;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  font-size: 20px;
-  color: #1e2a3a;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
   opacity: 1;
   line-height: 1;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .dark .slick-prev:before,
 .dark .slick-next:before {
-  color: #00BFA6;
+  color: #1e2a3a;
 }
 
-.slick-prev:hover:before,
-.slick-next:hover:before {
+.dark .slick-prev:hover:before,
+.dark .slick-next:hover:before {
   color: white;
 }
 
+/* Positioning - inside on mobile, slightly outside on desktop */
 .slick-prev {
-  left: 16px;
+  left: 12px;
 }
 
 .slick-next {
-  right: 16px;
+  right: 12px;
+}
+
+@media (min-width: 768px) {
+  .slick-prev {
+    left: -60px;
+  }
+  
+  .slick-next {
+    right: -60px;
+  }
+}
+
+/* Fallback for narrow containers - keep arrows inside */
+@media (min-width: 768px) and (max-width: 1320px) {
+  .slick-prev {
+    left: 16px;
+  }
+  
+  .slick-next {
+    right: 16px;
+  }
 }
 
 .slick-prev:before {
@@ -219,7 +273,19 @@ html {
   content: '→';
 }
 
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.slick-prev.slick-disabled:hover,
+.slick-next.slick-disabled:hover {
+  transform: translateY(-50%) scale(1);
+  background: rgba(30, 42, 58, 0.85);
+}
+
+.dark .slick-prev.slick-disabled:hover,
+.dark .slick-next.slick-disabled:hover {
+  background: rgba(0, 191, 166, 0.85);
 }
