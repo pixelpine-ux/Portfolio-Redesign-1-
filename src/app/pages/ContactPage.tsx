@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Mail, Linkedin, Send, CheckCircle2 } from 'lucide-react';
 
+// Duration in milliseconds to display the success message after form submission
+const SUCCESS_MESSAGE_DURATION = 5000;
+
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -41,7 +44,7 @@ export function ContactPage() {
       setFormData({ name: '', email: '', message: '' });
       
       // Reset success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000);
+      setTimeout(() => setIsSubmitted(false), SUCCESS_MESSAGE_DURATION);
     }
   };
 

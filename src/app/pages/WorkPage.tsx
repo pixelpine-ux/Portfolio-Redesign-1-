@@ -132,14 +132,14 @@ export function WorkPage() {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProjects.map((project) => {
-              const cardClasses = "bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group";
+              const baseCardClasses = "bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group";
               
               return project.link ? (
-                <Link key={project.id} to={project.link} className={`${cardClasses} cursor-pointer block`}>
+                <Link key={project.id} to={project.link} className={`${baseCardClasses} cursor-pointer block`}>
                   <ProjectCard project={project} />
                 </Link>
               ) : (
-                <div key={project.id} className={cardClasses}>
+                <div key={project.id} className={baseCardClasses}>
                   <ProjectCard project={project} />
                 </div>
               );
