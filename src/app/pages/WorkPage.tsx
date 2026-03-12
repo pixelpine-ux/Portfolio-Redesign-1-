@@ -135,7 +135,12 @@ export function WorkPage() {
               const baseCardClasses = "bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group";
               
               return project.link ? (
-                <Link key={project.id} to={project.link} className={`${baseCardClasses} cursor-pointer block`}>
+                <Link 
+                  key={project.id} 
+                  to={project.link} 
+                  className={`${baseCardClasses} cursor-pointer block`}
+                  aria-label={`View ${project.title} case study`}
+                >
                   <ProjectCard project={project} />
                 </Link>
               ) : (
