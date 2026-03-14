@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Send, CheckCircle2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { Mail, Linkedin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
-// Duration in milliseconds to display the success message after form submission
+const EMAILJS_SERVICE_ID = 'service_8kz8uw8';
+const EMAILJS_TEMPLATE_ID = 'template_vm7cl7o';
+const EMAILJS_PUBLIC_KEY = 'J9n1aMxmRnppynOYs';
 const SUCCESS_MESSAGE_DURATION = 5000;
 
 export function ContactPage() {
@@ -11,6 +14,8 @@ export function ContactPage() {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateForm = () => {
@@ -34,17 +39,28 @@ export function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (validateForm()) {
-      // Mock submission - in real app, this would send to a backend
-      console.log('Form submitted:', formData);
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { name: formData.name, email: formData.email, message: formData.message },
+        EMAILJS_PUBLIC_KEY
+      );
+
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), SUCCESS_MESSAGE_DURATION);
+    } catch {
+      setSubmitError('Something went wrong. Please try again or email me directly.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -81,6 +97,15 @@ export function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
             <div>
+              {submitError && (
+                <div className="mb-6 p-4 bg-coral/10 dark:bg-coral/20 border-l-4 border-coral rounded">
+                  <div className="flex items-center gap-2 text-coral">
+                    <AlertCircle size={20} />
+                    <span className="font-medium text-sm md:text-base">{submitError}</span>
+                  </div>
+                </div>
+              )}
+
               {isSubmitted && (
                 <div className="mb-6 p-4 bg-cyan/10 dark:bg-cyan/20 border-l-4 border-cyan rounded">
                   <div className="flex items-center gap-2 text-cyan">
@@ -165,9 +190,10 @@ export function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-cyan text-white h-12 rounded-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full bg-cyan text-white h-12 rounded-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message <Send size={18} />
+                  {isSubmitting ? 'Sending...' : <> Send Message <Send size={18} /> </>}
                 </button>
               </form>
             </div>
