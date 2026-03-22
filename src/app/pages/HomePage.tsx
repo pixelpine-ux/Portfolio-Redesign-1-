@@ -66,13 +66,12 @@ export function HomePage() {
               >
                 View Work <ArrowRight size={20} />
               </Link>
-              <a 
-                href="/resume.pdf" 
-                download="Mastewal_Resume.pdf"
+              <Link
+                to="/resume"
                 className="border-2 border-navy dark:border-cyan text-navy dark:text-cyan px-6 md:px-8 h-12 rounded-lg hover:bg-navy dark:hover:bg-cyan hover:text-white transition-all flex items-center justify-center gap-2 text-center"
               >
-                Download Resume <Download size={20} />
-              </a>
+                View Resume <Download size={20} />
+              </Link>
             </div>
           </div>
         </div>
