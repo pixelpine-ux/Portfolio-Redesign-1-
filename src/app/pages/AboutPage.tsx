@@ -102,7 +102,7 @@ export function AboutPage() {
               <div className="mt-6 md:mt-8 p-5 md:p-6 bg-cyan/10 dark:bg-cyan/20 rounded-lg border-l-4 border-cyan">
                 <p className="font-medium text-navy dark:text-cyan text-sm md:text-base">Currently Available</p>
                 <p className="text-slate dark:text-gray-200 mt-2 text-sm md:text-base">
-                  I'm actively seeking full-time product design opportunities starting in {getAvailabilityYear()}. 
+                  I'm actively seeking full-time software development X product design opportunities starting in {getAvailabilityYear()}. 
                   Open to remote positions and relocation.
                 </p>
               </div>
