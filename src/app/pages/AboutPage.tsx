@@ -13,7 +13,7 @@ const designSkills = [
 ];
 
 const technicalSkills = [
-  'HTML & CSS',
+  'Web Development',
   'JavaScript/TypeScript',
   'React & Next.js',
   'Tailwind CSS',
