@@ -1,20 +1,19 @@
 export function GeometricPattern() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Dot grid */}
+      <svg className="absolute inset-0 w-full h-full opacity-[0.07] dark:opacity-[0.12]" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="geometric-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-            <circle cx="50" cy="50" r="2" fill="#1A2A40" />
-            <circle cx="0" cy="0" r="2" fill="#1A2A40" />
-            <circle cx="100" cy="0" r="2" fill="#1A2A40" />
-            <circle cx="0" cy="100" r="2" fill="#1A2A40" />
-            <circle cx="100" cy="100" r="2" fill="#1A2A40" />
-            <line x1="0" y1="0" x2="100" y2="100" stroke="#1A2A40" strokeWidth="0.5" />
-            <line x1="100" y1="0" x2="0" y2="100" stroke="#1A2A40" strokeWidth="0.5" />
+          <pattern id="dot-grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1.2" fill="#00BFA6" />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#geometric-pattern)" />
+        <rect width="100%" height="100%" fill="url(#dot-grid)" />
       </svg>
+      {/* Top-left cyan glow orb */}
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-cyan/10 dark:bg-cyan/15 blur-3xl" />
+      {/* Bottom-right navy glow orb */}
+      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full bg-navy/5 dark:bg-cyan/10 blur-3xl" />
     </div>
   );
 }

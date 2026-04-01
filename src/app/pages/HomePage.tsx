@@ -7,16 +7,28 @@ const skills = [
   {
     icon: Palette,
     title: 'Design',
+    accent: 'border-t-cyan',
+    iconBg: 'bg-cyan/10 dark:bg-cyan/20',
+    iconColor: 'text-cyan',
+    dotColor: 'bg-cyan',
     items: ['UI/UX Design', 'Prototyping', 'User Research', 'Design Systems'],
   },
   {
     icon: Code2,
     title: 'Development',
+    accent: 'border-t-coral',
+    iconBg: 'bg-coral/10 dark:bg-coral/20',
+    iconColor: 'text-coral',
+    dotColor: 'bg-coral',
     items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
   },
   {
     icon: Wrench,
     title: 'Tools',
+    accent: 'border-t-navy dark:border-t-cyan',
+    iconBg: 'bg-navy/10 dark:bg-cyan/20',
+    iconColor: 'text-navy dark:text-cyan',
+    dotColor: 'bg-navy dark:bg-cyan',
     items: ['Figma', 'Git', 'VS Code', 'Adobe Creative Suite'],
   },
 ];
@@ -49,12 +61,16 @@ export function HomePage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 md:pt-40 md:pb-24 px-4 md:px-6 relative overflow-hidden dark:bg-slate-900">
+      <section className="pt-24 pb-12 md:pt-40 md:pb-24 px-4 md:px-6 relative overflow-hidden bg-white dark:bg-slate-900">
         <GeometricPattern />
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="max-w-3xl">
+            {/* Role label */}
+            <div className="inline-flex items-center gap-2 mb-4 md:mb-6 px-3 py-1.5 rounded-full border border-cyan/30 bg-cyan/5 dark:bg-cyan/10">
+              <span className="w-2 h-2 rounded-full bg-cyan animate-pulse" />
+              <span className="text-xs md:text-sm font-mono text-cyan tracking-wide">Product Designer & Engineer</span>
+            </div>
             <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl">Hi, I'm Mastewal</h1>
-            <h2 className="text-cyan mb-4 md:mb-6 text-xl md:text-3xl">Product Designer & Developer</h2>
             <p className="text-base md:text-xl mb-6 md:mb-8 max-w-2xl dark:text-gray-200">
               I'm a Computer Science student passionate about creating beautiful, functional digital experiences. 
               I bridge the gap between design and development to build products that people love.
@@ -85,14 +101,16 @@ export function HomePage() {
             {skills.map((skill) => (
               <div
                 key={skill.title}
-                className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className={`bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all border-t-4 ${skill.accent}`}
               >
-                <skill.icon className="w-10 h-10 md:w-12 md:h-12 text-cyan mb-3 md:mb-4" />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-4 md:mb-5 ${skill.iconBg}`}>
+                  <skill.icon className={`w-6 h-6 md:w-7 md:h-7 ${skill.iconColor}`} />
+                </div>
                 <h3 className="mb-3 md:mb-4 text-xl md:text-2xl">{skill.title}</h3>
                 <ul className="space-y-2">
                   {skill.items.map((item) => (
                     <li key={item} className="text-slate dark:text-gray-200 flex items-center gap-2 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 bg-cyan rounded-full flex-shrink-0"></span>
+                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${skill.dotColor}`}></span>
                       {item}
                     </li>
                   ))}
