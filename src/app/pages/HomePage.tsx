@@ -2,6 +2,45 @@ import { Link } from 'react-router-dom';
 import { Code2, Palette, Wrench, ArrowRight, Download } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { GeometricPattern } from '@/app/components/GeometricPattern';
+import { useEffect, useState } from 'react';
+
+const roles = ['Product Designer', 'Software Developer'];
+
+function TypingLabel() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    const speed = isDeleting ? 40 : 80;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && displayed === current) {
+        setTimeout(() => setIsDeleting(true), 1800);
+        return;
+      }
+      if (isDeleting && displayed === '') {
+        setIsDeleting(false);
+        setRoleIndex((i) => (i + 1) % roles.length);
+        return;
+      }
+      setDisplayed(isDeleting ? current.slice(0, displayed.length - 1) : current.slice(0, displayed.length + 1));
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, roleIndex]);
+
+  return (
+    <div className="inline-flex items-center gap-2 mb-4 md:mb-6 px-4 py-2 rounded-full border border-cyan/30 bg-cyan/5 dark:bg-cyan/10">
+      <span className="w-2 h-2 rounded-full bg-cyan animate-pulse flex-shrink-0" />
+      <span className="text-sm md:text-base font-mono text-cyan tracking-wide">
+        {displayed}
+        <span className="animate-pulse">|</span>
+      </span>
+    </div>
+  );
+}
 
 const skills = [
   {
@@ -66,10 +105,7 @@ export function HomePage() {
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="max-w-3xl">
             {/* Role label */}
-            <div className="inline-flex items-center gap-2 mb-4 md:mb-6 px-3 py-1.5 rounded-full border border-cyan/30 bg-cyan/5 dark:bg-cyan/10">
-              <span className="w-2 h-2 rounded-full bg-cyan animate-pulse" />
-              <span className="text-xs md:text-sm font-mono text-cyan tracking-wide">Product Designer & Engineer</span>
-            </div>
+            <TypingLabel />
             <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl">Hi, I'm Mastewal</h1>
             <p className="text-base md:text-xl mb-6 md:mb-8 max-w-2xl dark:text-gray-200">
               I'm a Computer Science student passionate about creating beautiful, functional digital experiences. 

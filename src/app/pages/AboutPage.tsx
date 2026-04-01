@@ -1,5 +1,6 @@
 import { GraduationCap, Briefcase, Target } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
+import { MapPin } from 'lucide-react';
 
 const designSkills = [
   'User Interface Design',
@@ -72,7 +73,7 @@ export function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
             <div className="md:col-span-1">
-              <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-lg">
+              <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-lg ring-4 ring-cyan/30 ring-offset-4 ring-offset-white dark:ring-offset-slate-900">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1745434159123-4908d0b9df94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBlcnNvbiUyMHNtaWxpbmd8ZW58MXx8fHwxNzY5NzUzOTk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Mastewal"
@@ -81,6 +82,9 @@ export function AboutPage() {
               </div>
             </div>
             <div className="md:col-span-2">
+              <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full border border-cyan/30 bg-cyan/5 dark:bg-cyan/10">
+                <span className="text-xs font-mono text-cyan tracking-wide">// about</span>
+              </div>
               <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl">About Me</h1>
               <div className="space-y-4 text-sm md:text-base">
                 <p className="dark:text-gray-200">
@@ -100,11 +104,18 @@ export function AboutPage() {
                 </p>
               </div>
               <div className="mt-6 md:mt-8 p-5 md:p-6 bg-cyan/10 dark:bg-cyan/20 rounded-lg border-l-4 border-cyan">
-                <p className="font-medium text-navy dark:text-cyan text-sm md:text-base">Currently Available</p>
-                <p className="text-slate dark:text-gray-200 mt-2 text-sm md:text-base">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <p className="font-medium text-navy dark:text-cyan text-sm md:text-base">Currently Available</p>
+                </div>
+                <p className="text-slate dark:text-gray-200 text-sm md:text-base">
                   I'm actively seeking full-time software development X product design opportunities starting in {getAvailabilityYear()}. 
                   Open to remote positions and relocation.
                 </p>
+                <div className="flex items-center gap-1.5 mt-3 text-xs text-slate dark:text-gray-400">
+                  <MapPin size={12} />
+                  Addis Ababa, Ethiopia · Remote friendly
+                </div>
               </div>
             </div>
           </div>
@@ -116,38 +127,35 @@ export function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-center mb-8 md:mb-12 text-2xl md:text-4xl">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="mb-4 md:mb-6 text-cyan text-xl md:text-2xl">Design Skills</h3>
-              <ul className="space-y-3">
+            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm border-t-4 border-t-cyan">
+              <h3 className="mb-4 md:mb-5 text-cyan text-xl md:text-2xl">Design Skills</h3>
+              <div className="flex flex-wrap gap-2">
                 {designSkills.map((skill) => (
-                  <li key={skill} className="flex items-center gap-3 text-sm md:text-base">
-                    <span className="w-2 h-2 bg-cyan rounded-full flex-shrink-0"></span>
-                    <span className="text-slate dark:text-gray-200">{skill}</span>
-                  </li>
+                  <span key={skill} className="text-xs md:text-sm px-3 py-1.5 rounded-full bg-cyan/10 dark:bg-cyan/20 text-cyan border border-cyan/20 font-medium">
+                    {skill}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="mb-4 md:mb-6 text-coral text-xl md:text-2xl">Technical Skills</h3>
-              <ul className="space-y-3">
+            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm border-t-4 border-t-coral">
+              <h3 className="mb-4 md:mb-5 text-coral text-xl md:text-2xl">Technical Skills</h3>
+              <div className="flex flex-wrap gap-2">
                 {technicalSkills.map((skill) => (
-                  <li key={skill} className="flex items-center gap-3 text-sm md:text-base">
-                    <span className="w-2 h-2 bg-coral rounded-full flex-shrink-0"></span>
-                    <span className="text-slate dark:text-gray-200">{skill}</span>
-                  </li>
+                  <span key={skill} className="text-xs md:text-sm px-3 py-1.5 rounded-full bg-coral/10 dark:bg-coral/20 text-coral border border-coral/20 font-medium">
+                    {skill}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="mb-4 md:mb-6 text-navy dark:text-cyan text-xl md:text-2xl">Tools & Software</h3>
-              <ul className="space-y-3">
+            <div className="bg-white dark:bg-slate-700 p-6 md:p-8 rounded-lg shadow-sm border-t-4 border-t-navy dark:border-t-cyan">
+              <h3 className="mb-4 md:mb-5 text-navy dark:text-cyan text-xl md:text-2xl">Tools & Software</h3>
+              <div className="flex flex-wrap gap-2">
                 {tools.map((tool) => (
-                  <li key={tool} className="flex items-center gap-3 text-sm md:text-base">
-                    <span className="w-2 h-2 bg-navy dark:bg-cyan rounded-full flex-shrink-0"></span>
-                    <span className="text-slate dark:text-gray-200">{tool}</span>
-                  </li>
+                  <span key={tool} className="text-xs md:text-sm px-3 py-1.5 rounded-full bg-navy/10 dark:bg-cyan/20 text-navy dark:text-cyan border border-navy/20 dark:border-cyan/20 font-medium">
+                    {tool}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -157,15 +165,30 @@ export function AboutPage() {
       <section className="py-12 md:py-24 px-4 md:px-6 dark:bg-slate-900">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-center mb-8 md:mb-12 text-2xl md:text-4xl">My Journey</h2>
-          <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
+          <div className="max-w-3xl mx-auto">
             {timeline.map((item, index) => (
               <div key={index} className="flex gap-4 md:gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan flex items-center justify-center">
-                    <item.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                {/* Icon + connecting line */}
+                <div className="flex flex-col items-center flex-shrink-0">
+                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center z-10 ${
+                    index === timeline.length - 1
+                      ? 'bg-cyan/20 border-2 border-dashed border-cyan'
+                      : 'bg-cyan'
+                  }`}>
+                    <item.icon className={`w-5 h-5 md:w-6 md:h-6 ${
+                      index === timeline.length - 1 ? 'text-cyan' : 'text-white'
+                    }`} />
                   </div>
+                  {index < timeline.length - 1 && (
+                    <div className="w-px flex-1 bg-gray-200 dark:bg-gray-700 my-1" />
+                  )}
                 </div>
-                <div className="flex-grow pb-6 md:pb-8 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                {/* Content */}
+                <div className={`flex-grow pb-8 md:pb-10 ${
+                  index === timeline.length - 1
+                    ? 'bg-cyan/5 dark:bg-cyan/10 border border-dashed border-cyan/30 rounded-lg p-4 mb-0'
+                    : ''
+                }`}>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-1 sm:gap-4">
                     <h3 className="text-lg md:text-xl">{item.title}</h3>
                     <span className="text-xs md:text-sm text-slate dark:text-gray-400 whitespace-nowrap">{item.period}</span>

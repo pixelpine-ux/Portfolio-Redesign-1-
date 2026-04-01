@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 type ProjectCategory = 'All' | 'Design' | 'Development';
 
@@ -41,16 +42,22 @@ const projects: Project[] = [
   },
 ];
 
+const categoryConfig = {
+  Design: { label: 'Design', color: 'bg-cyan/10 dark:bg-cyan/20 text-cyan border border-cyan/30' },
+  Development: { label: 'Development', color: 'bg-coral/10 dark:bg-coral/20 text-coral border border-coral/30' },
+};
+
 function ProjectCard({ project }: { project: Project }) {
-  // Helper to generate responsive Unsplash URLs with WebP format
   const getOptimizedUrl = (url: string, width: number) => {
     if (!url.includes('unsplash.com')) return url;
     return url.replace(/&w=\d+/, '') + `&w=${width}&fm=webp&q=80`;
   };
 
+  const badge = categoryConfig[project.category];
+
   return (
     <>
-      <div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-slate-800">
+      <div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-slate-800 relative">
         <img
           src={getOptimizedUrl(project.image, 800)}
           srcSet={`
@@ -65,11 +72,15 @@ function ProjectCard({ project }: { project: Project }) {
           decoding="async"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        {/* Category badge — top right corner of image */}
+        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm ${badge.color}`}>
+          {badge.label}
+        </span>
       </div>
       <div className="p-5 md:p-6">
         <h3 className="mb-2 text-lg md:text-xl">{project.title}</h3>
         <p className="text-slate dark:text-gray-200 mb-4 text-sm md:text-base">{project.description}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
@@ -80,9 +91,9 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         {project.link && (
-          <span className="mt-4 inline-block text-sm text-cyan hover:underline">
-            View Case Study →
-          </span>
+          <div className="flex items-center gap-1.5 text-sm font-medium text-cyan">
+            View Case Study <ArrowRight size={14} />
+          </div>
         )}
       </div>
     </>

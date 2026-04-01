@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Code2 } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,10 +10,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-white text-2xl mb-4">Mastewal</h3>
-            <p className="text-gray-200 dark:text-gray-400">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-sm font-mono font-bold text-cyan bg-cyan/10 px-2 py-1 rounded border border-cyan/30">&lt;M/&gt;</span>
+              <h3 className="text-white text-2xl">Mastewal</h3>
+            </div>
+            <p className="text-gray-400 text-sm mb-4">
               Product Designer & Developer creating beautiful, functional digital experiences.
             </p>
+            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+              <Code2 size={12} className="text-cyan" />
+              <span>Designed in Figma. Built in React.</span>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -68,8 +75,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-gray-200 dark:text-gray-400">
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-500">
           <p>&copy; {currentYear} Mastewal. All rights reserved.</p>
+          <p className="text-xs font-mono text-gray-600">v1.0.0</p>
         </div>
       </div>
     </footer>
