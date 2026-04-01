@@ -17,12 +17,13 @@ export function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 shadow-sm transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-white/20 dark:border-white/10 shadow-sm transition-colors">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-navy dark:text-cyan">
-            Mastewal
+          <Link to="/" className="flex items-center gap-2 group">
+            <span className="text-sm font-mono font-bold text-cyan bg-cyan/10 dark:bg-cyan/20 px-2 py-1 rounded border border-cyan/30">&lt;M/&gt;</span>
+            <span className="text-xl font-bold text-navy dark:text-white group-hover:text-cyan transition-colors">Mastewal</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,7 +69,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+          <nav className="md:hidden py-4 border-t border-white/20 dark:border-white/10">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
