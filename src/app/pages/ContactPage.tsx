@@ -230,8 +230,8 @@ export function ContactPage() {
                     <div>
                       <h3 className="mb-2">LinkedIn</h3>
                       <p className="text-slate dark:text-gray-200 mb-2 text-sm">Connect with me professionally</p>
-                      <a href="https://linkedin.com/in/mastewal" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-sm">
-                        linkedin.com/in/mastewal
+                      <a href="https://linkedin.com/in/mastewal-alemu-a65b2a2b9" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-sm">
+                        linkedin.com/in/mastewal-alemu
                       </a>
                     </div>
                   </div>
@@ -245,8 +245,8 @@ export function ContactPage() {
                     <div>
                       <h3 className="mb-2">GitHub</h3>
                       <p className="text-slate dark:text-gray-200 mb-2 text-sm">See my code and open source work</p>
-                      <a href="https://github.com/mastewal" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:underline text-sm">
-                        github.com/mastewal
+                      <a href="https://github.com/pixelpine-ux" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:underline text-sm">
+                        github.com/pixelpine-ux
                       </a>
                     </div>
                   </div>

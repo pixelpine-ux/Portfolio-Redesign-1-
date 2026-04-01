@@ -47,15 +47,16 @@ export function Footer() {
             <h4 className="text-white mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="mailto:mastewal@example.com"
+                href="mailto:iammastewal@gmail.com"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan transition-colors"
                 aria-label="Email"
               >
                 <Mail size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/mastewal"
+                href="https://www.linkedin.com/in/mastewal-alemu-a65b2a2b9"
                 target="_blank"
+              
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan transition-colors"
                 aria-label="LinkedIn"
@@ -63,7 +64,7 @@ export function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://github.com/mastewal"
+                href="https://github.com/pixelpine-ux"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan transition-colors"
