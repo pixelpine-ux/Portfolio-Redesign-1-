@@ -41,7 +41,7 @@ const experience = [
 const education = [
   {
     degree: 'Bachelor of Science in Computer Science',
-    school: 'NEW GENEREATION UNIVERSITY COLLEGE',
+    school: 'New Generation University College',
     period: '2022 – Present',
     notes: 'Focus: Human-Computer Interaction & Software Engineering | GPA: X.X/4.0',
   },
