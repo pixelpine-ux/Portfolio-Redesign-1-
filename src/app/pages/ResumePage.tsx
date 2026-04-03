@@ -2,7 +2,7 @@ import { Download, Mail, Phone, MapPin, Globe, Github, Linkedin } from 'lucide-r
 
 const contact = {
   name: 'Mastewal',
-  title: 'Product Designer & Frontend Developer',
+  title: 'Product Designer & Full Stack Developer',
   email: 'mastewal@email.com',
   phone: '+251 986722189',
   location: 'Addis Ababa, Ethiopia',
@@ -12,7 +12,7 @@ const contact = {
 };
 
 const summary =
-  'Computer Science student with hands-on experience in UI/UX design and frontend development. I bridge the gap between design and engineering to deliver user-centered digital products. Proficient in Figma, React, and TypeScript with a strong eye for detail and a passion for clean, accessible interfaces.';
+  'Computer Science student with hands-on experience in UI/UX design and software development. I bridge the gap between design and engineering to deliver user-centered digital products. Proficient in Figma, React, and TypeScript with a strong eye for detail and a passion for clean, accessible interfaces.';
 
 const experience = [
   {
@@ -31,7 +31,7 @@ const experience = [
     company: 'Self-Employed',
     period: '2023 – Present',
     bullets: [
-      'Delivered responsive portfolio and landing page projects for 5+ clients.',
+      'Delivered responsive portfolio and landing page projects for 6+ clients.',
       'Built projects with React, TypeScript, and Tailwind CSS.',
       'Managed full project lifecycle from requirements gathering to deployment.',
     ],
@@ -41,7 +41,7 @@ const experience = [
 const education = [
   {
     degree: 'Bachelor of Science in Computer Science',
-    school: 'Your University',
+    school: 'NEW GENEREATION UNIVERSITY COLLEGE',
     period: '2022 – Present',
     notes: 'Focus: Human-Computer Interaction & Software Engineering | GPA: X.X/4.0',
   },
