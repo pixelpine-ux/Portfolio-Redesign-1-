@@ -1,7 +1,7 @@
 import { GraduationCap, Briefcase, Target } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { MapPin } from 'lucide-react';
-
+import aboutPhoto from '@/assets/file_photo.jpg';
 const designSkills = [
   'User Interface Design',
   'User Experience Design',
@@ -75,7 +75,7 @@ export function AboutPage() {
             <div className="md:col-span-1">
               <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-lg ring-4 ring-cyan/30 ring-offset-4 ring-offset-white dark:ring-offset-slate-900">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1745434159123-4908d0b9df94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBlcnNvbiUyMHNtaWxpbmd8ZW58MXx8fHwxNzY5NzUzOTk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={aboutPhoto}
                   alt="Mastewal"
                   className="w-full h-full object-cover"
                 />
