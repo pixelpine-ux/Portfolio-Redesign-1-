@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Code2, Palette, Wrench, ArrowRight, Download } from 'lucide-react';
+import { Code2, Palette, Wrench, ArrowRight, Download, Edit3, PenTool } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { GeometricPattern } from '@/app/components/GeometricPattern';
 import { useEffect, useState } from 'react';
@@ -45,7 +45,7 @@ function TypingLabel() {
 const skills = [
   {
     icon: Palette,
-    title: 'Design',
+    title: 'Product & Design Systems',
     accent: 'border-t-cyan',
     iconBg: 'bg-cyan/10 dark:bg-cyan/20',
     iconColor: 'text-cyan',
@@ -59,16 +59,16 @@ const skills = [
     iconBg: 'bg-coral/10 dark:bg-coral/20',
     iconColor: 'text-coral',
     dotColor: 'bg-coral',
-    items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+    items: ['Python','Data Pipelines','Text Processing','Feature Extraction','API Design','Node.js'],
   },
   {
-    icon: Wrench,
-    title: 'Tools',
+    icon: PenTool,
+    title: 'Interface & Visual Design',
     accent: 'border-t-navy dark:border-t-cyan',
     iconBg: 'bg-navy/10 dark:bg-cyan/20',
     iconColor: 'text-navy dark:text-cyan',
     dotColor: 'bg-navy dark:bg-cyan',
-    items: ['Figma', 'Git', 'VS Code', 'Adobe Creative Suite'],
+    items: ['Figma', 'Git', 'VS Code', 'Nextjs','tailwind CSS'],
   },
 ];
 

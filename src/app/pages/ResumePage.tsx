@@ -3,17 +3,17 @@ import { Download, Mail, Phone, MapPin, Globe, Github, Linkedin } from 'lucide-r
 const contact = {
   name: 'Mastewal Alemu',
   title: 'Product Designer & Full Stack Developer',
-  email: 'mastewal@email.com',
+  email: 'iammastewal@gmail.com',
   phone: '+251 986722189',
   location: 'Addis Ababa, Ethiopia',
   website: 'yourportfolio.com',
-  github: 'github.com/mastewal',
+  github: 'github.com/pixelpine-ux',
   linkedin: 'linkedin.com/in/mastewal',
 };
 
 const summary =
-  'Computer Science student with hands-on experience in UI/UX design and software development. I bridge the gap between design and engineering to deliver user-centered digital products. Proficient in Figma, React, and TypeScript with a strong eye for detail and a passion for clean, accessible interfaces.';
 
+'Computer Science student building software at the intersection of engineering, design, and market intelligence. Focused on developing Python-based data pipelines and APIs that convert unstructured data into structured strategic artifacts. Applies product thinking to shape how brands are analyzed, positioned, and perceived through data-driven systems.'
 const experience = [
   {
     title: 'UI/UX Design Intern',
@@ -43,14 +43,15 @@ const education = [
     degree: 'Bachelor of Science in Computer Science',
     school: 'New Generation University College',
     period: '2022 – Present',
-    notes: 'Focus: Human-Computer Interaction & Software Engineering | GPA: X.X/4.0',
+    notes: 'Focus: Human-Computer Interaction & Software Engineering | GPA: 3.X/4.0',
   },
 ];
 
 const skills = {
   Design: ['UI/UX Design', 'Prototyping', 'Wireframing', 'User Research', 'Usability Testing', 'Design Systems'],
-  Development: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML & CSS', 'RESTful APIs'],
-  Tools: ['Figma', 'Adobe XD', 'Photoshop', 'Git & GitHub', 'VS Code', 'Notion'],
+  Development: ['Python (data pipelines, text processing, API design)', 'FastAPI/Flask (if applicable)', 'REST API architecture', 'data modeling', 'pipeline orchestration', 'RESTful APIs'],
+  Tools: ['Figma (system design, not just UI), Git & GitHub, VS Code'],
+  DataAnalysis: ['TF-IDF', 'clustering (KMeans)', 'sentiment analysis (VADER or custom pipelines)', 'feature extraction', 'dataset normalization'],
 };
 
 const projects = [
@@ -60,6 +61,11 @@ const projects = [
     description: 'Full redesign of an online shopping platform focused on conversion optimization and accessibility.',
   },
   {
+    name: 'Market Intelligence Pipeline',
+    tech: 'Python · Data Processing · APIs',
+    description: 'Designed a deterministic pipeline that transforms unstructured market data into structured analytical outputs, including sentiment scoring, clustering, and strategic summaries.',
+  },
+  {
     name: 'Task Management App',
     tech: 'React · TypeScript · Tailwind CSS',
     description: 'Full-stack task manager with real-time updates, drag-and-drop, and dark mode support.',
@@ -67,7 +73,7 @@ const projects = [
   {
     name: 'Portfolio Website',
     tech: 'React · Vite · Tailwind CSS',
-    description: 'Responsive personal portfolio showcasing design and development work with dark mode.',
+    description: 'Responsive personal portfolio showcasing design and development projects.',
   },
 ];
 

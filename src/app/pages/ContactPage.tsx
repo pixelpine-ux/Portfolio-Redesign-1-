@@ -2,9 +2,9 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Linkedin, Send, CheckCircle2, AlertCircle, Github, Clock } from 'lucide-react';
 
-const EMAILJS_SERVICE_ID = 'service_8kz8uw8';
-const EMAILJS_TEMPLATE_ID = 'template_vm7cl7o';
-const EMAILJS_PUBLIC_KEY = 'J9n1aMxmRnppynOYs';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const SUCCESS_MESSAGE_DURATION = 5000;
 
 export function ContactPage() {
@@ -17,6 +17,9 @@ export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const isEmailConfigured = Boolean(
+    EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY
+  );
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -45,6 +48,12 @@ export function ContactPage() {
 
     setIsSubmitting(true);
     setSubmitError('');
+
+    if (!isEmailConfigured) {
+      setSubmitError('Contact form is not configured yet. Please email me directly.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       await emailjs.send(
@@ -121,6 +130,14 @@ export function ContactPage() {
                   <p className="text-slate dark:text-gray-200 mt-1 text-xs md:text-sm">
                     Thank you for reaching out. I'll get back to you soon.
                   </p>
+                </div>
+              )}
+
+              {!isEmailConfigured && !submitError && (
+                <div className="mb-6 p-4 bg-amber-100 dark:bg-amber-500/10 border-l-4 border-amber-500 rounded">
+                  <span className="font-medium text-sm md:text-base text-amber-700 dark:text-amber-300">
+                    EmailJS environment variables are missing. Add them before deploying the contact form.
+                  </span>
                 </div>
               )}
 

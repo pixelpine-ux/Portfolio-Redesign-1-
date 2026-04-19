@@ -9,6 +9,8 @@ import { WorkPage } from '@/app/pages/WorkPage';
 import { ContactPage } from '@/app/pages/ContactPage';
 import { NotFoundPage } from '@/app/pages/NotFoundPage';
 import { EcommerceCaseStudy } from '@/app/pages/EcommerceCaseStudy';
+import { IntelligencePipelineCaseStudy } from '@/app/pages/IntelligencePipelineCaseStudy';
+import { AcademicAssignmentHelperCaseStudy } from '@/app/pages/AcademicAssignmentHelperCaseStudy';
 import { ResumePage } from '@/app/pages/ResumePage';
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/work" element={<WorkPage />} />
               <Route path="/work/ecommerce-redesign" element={<EcommerceCaseStudy />} />
+              <Route path="/work/intelligence-pipeline" element={<IntelligencePipelineCaseStudy />} />
+              <Route path="/work/academic-assignment-helper-rag" element={<AcademicAssignmentHelperCaseStudy />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/resume" element={<ResumePage />} />
               <Route path="*" element={<NotFoundPage />} />
