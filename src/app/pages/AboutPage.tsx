@@ -88,9 +88,10 @@ export function AboutPage() {
               <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl">About Me</h1>
               <div className="space-y-4 text-sm md:text-base">
                 <p className="dark:text-gray-200">
-                  I'm a Computer Science student with a passion for design and a knack for development. 
-                  My journey into product design began when I realized that great technology isn't just 
-                  about code—it's about creating experiences that truly resonate with users.
+                  Computer Science student focused on building software at the intersection of engineering, design, and market intelligence.
+I develop data pipelines and APIs in Python to transform unstructured data into strategic insights.
+My work centers on how technology shapes brand perception through structured, data-driven systems.
+I approach product development as the design of intelligence, not just interfaces or code.
                 </p>
                 <p className="dark:text-gray-200">
                   With a strong foundation in both design principles and technical implementation, I bring 

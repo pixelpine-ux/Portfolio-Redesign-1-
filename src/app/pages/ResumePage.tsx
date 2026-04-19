@@ -1,7 +1,7 @@
 import { Download, Mail, Phone, MapPin, Globe, Github, Linkedin } from 'lucide-react';
 
 const contact = {
-  name: 'Mastewal',
+  name: 'Mastewal Alemu',
   title: 'Product Designer & Full Stack Developer',
   email: 'mastewal@email.com',
   phone: '+251 986722189',
