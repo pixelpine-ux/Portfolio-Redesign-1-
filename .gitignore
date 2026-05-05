@@ -39,3 +39,10 @@ coverage/
 # Misc
 *.log
 .cache/
+
+# Internal docs & artifacts
+.codex
+DARK_MODE_IMPLEMENTATION.md
+PORTFOLIO_ISSUES_AND_FIXES.md
+cleanup-repo.sh
+guidelines/
