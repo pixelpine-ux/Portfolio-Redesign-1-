@@ -89,9 +89,9 @@ export function AboutPage() {
               <div className="space-y-4 text-sm md:text-base">
                 <p className="dark:text-gray-200">
                   Computer Science student focused on building software at the intersection of engineering, design, and market intelligence.
-I develop data pipelines and APIs in Python to transform unstructured data into strategic insights.
-My work centers on how technology shapes brand perception through structured, data-driven systems.
-I approach product development as the design of intelligence, not just interfaces or code.
+I develop systems that transform information into business value. Whether the information comes from customers, software platforms, AI models or physical sensors my focus is turning  data into products, products into brands, and brands into businesses. 
+  I am passionate about creating user-centered designs that solve real-world problems and enhance user experiences.
+
                 </p>
                 <p className="dark:text-gray-200">
                   With a strong foundation in both design principles and technical implementation, I bring 
