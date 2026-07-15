@@ -6,7 +6,7 @@ const contact = {
   email: 'iammastewal@gmail.com',
   phone: '+251 986722189',
   location: 'Addis Ababa, Ethiopia',
-  website: 'yourportfolio.com',
+  website: 'myportfolio-xi-sage-94.vercel.app',
   github: 'github.com/pixelpine-ux',
   linkedin: 'linkedin.com/in/mastewal',
 };
