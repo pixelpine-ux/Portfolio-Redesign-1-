@@ -18,7 +18,7 @@ export function AcademicAssignmentHelperCaseStudy() {
         <div className="max-w-[1200px] mx-auto">
           <h1 className="mb-3 md:mb-4 text-3xl md:text-5xl">Academic Assignment Helper & Plagiarism Detector (RAG-Powered)</h1>
           <p className="text-base md:text-xl text-slate dark:text-gray-300 max-w-3xl">
-            The full case study is being organized. The project card and route are in place, and we can build out the final narrative next.
+            The full case study is being organized.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
