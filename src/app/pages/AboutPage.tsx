@@ -3,36 +3,37 @@ import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { MapPin } from 'lucide-react';
 import aboutPhoto from '@/assets/file_photo.jpg';
 const designSkills = [
-  'User Interface Design',
-  'User Experience Design',
-  'Prototyping & Wireframing',
+  'User Interface (UI) Design',
+  'User Experience (UX) Design',
+  'Wireframing',
+  'Prototyping',
   'Design Systems',
-  'User Research',
-  'Usability Testing',
-  'Information Architecture',
-  'Interaction Design',
+  'Responsive Design',
+  'Figma',
+  'Product Thinking',
 ];
+  
 
 const technicalSkills = [
-  'Web Development',
-  'JavaScript/TypeScript',
-  'React & Next.js',
-  'Tailwind CSS',
+  'HTML & CSS',
+  'JavaScript',
+  'React',
+  'Next.js',
+  'Python',
   'Git & GitHub',
-  'Responsive Design',
-  'Web Accessibility',
-  'RESTful APIs',
+  'REST APIs',
+  'Responsive Web Development',
 ];
 
 const tools = [
   'Figma',
-  'Adobe XD',
-  'Photoshop',
-  'Illustrator',
   'VS Code',
+  'GitHub',
   'Notion',
-  'Slack',
-  'Jira',
+  'Postman',
+  'Chrome DevTools',
+  'Adobe Photoshop',
+  'Canva',
 ];
 
 const getAvailabilityYear = () => {
@@ -52,7 +53,7 @@ const timeline = [
   {
     icon: Briefcase,
     title: 'UI/UX Design Intern',
-    organization: 'Tech Startup',
+    organization: 'Tech Startup Sheba Labs',
     period: '2024 - 2025',
     description: 'Designed user interfaces for mobile and web applications, conducted user research, and created design systems.',
   },
@@ -88,9 +89,7 @@ export function AboutPage() {
               <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl">About Me</h1>
               <div className="space-y-4 text-sm md:text-base">
                 <p className="dark:text-gray-200">
-                  Computer Science student focused on building software at the intersection of engineering, design, and market intelligence.
-I develop systems that transform information into business value. Whether the information comes from customers, software platforms, AI models or physical sensors my focus is turning  data into products, products into brands, and brands into businesses. 
-  I am passionate about creating user-centered designs that solve real-world problems and enhance user experiences.
+                  Computer Science student passionate about building software at the intersection of engineering, product design, and business. I enjoy transforming data into practical digital products that solve real-world problems and create value for users and organizations. With a strong interest in user-centered design and software development, I aim to build intuitive, scalable solutions that deliver meaningful experiences.
 
                 </p>
                 <p className="dark:text-gray-200">
