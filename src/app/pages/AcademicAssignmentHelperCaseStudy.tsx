@@ -78,7 +78,6 @@ export function AcademicAssignmentHelperCaseStudy() {
 
       <section className="py-12 md:py-16 px-4 md:px-6 bg-off-white dark:bg-slate-800">
         <div className="max-w-[1200px] mx-auto">
-<<<<<<< HEAD
           <div className="max-w-4xl">
             <h1 className="mb-3 md:mb-4 text-3xl md:text-5xl">
               Academic Assignment Helper & Plagiarism Detector (RAG-Powered)
